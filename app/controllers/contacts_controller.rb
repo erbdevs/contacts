@@ -1,5 +1,5 @@
 class ContactsController < ApplicationController
-  before_action :find_contact, only: [:show, :edit, :update]
+  before_action :find_contact, only: [:show, :edit, :update, :destroy]
 
   def new
     @contact = Contact.new
@@ -31,6 +31,12 @@ class ContactsController < ApplicationController
     else
       render :edit, status: :unprocessable_entity
     end
+  end
+
+  def destroy
+    @contact.destroy
+
+    redirect_to contacts_path, status: :see_other
   end
 
 private
