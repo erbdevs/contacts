@@ -1,4 +1,6 @@
 class ContactsController < ApplicationController
+  before_action :find_contact, only: [:show, :edit, :update]
+
   def new
     @contact = Contact.new
   end
@@ -18,7 +20,17 @@ class ContactsController < ApplicationController
   end
 
   def show
-    @contact = Contact.find(params[:id])
+  end
+
+  def edit
+  end
+
+  def update
+    if @contact.update(contact_params)
+      redirect_to @contact
+    else
+      render :edit, status: :unprocessable_entity
+    end
   end
 
 private
@@ -31,5 +43,9 @@ private
       :phone,
       :email
     )
+  end
+
+  def find_contact
+    @contact = Contact.find(params[:id])
   end
 end
