@@ -7,3 +7,8 @@ This is an example application used for didactic purposes. There is a model call
 ruby: 3.0.2
 rails: 6.1.5
 db: Postgresql
+
+# ToDo
+
+- Add validations to the different Contact fields such as:
+  - Email: format validations
