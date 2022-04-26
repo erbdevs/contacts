@@ -1,24 +1,9 @@
-# README
+# Contacts application
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is an example application used for didactic purposes. There is a model called Contact, and we can do CRUD operations with objects of this class.
 
-Things you may want to cover:
+# Information
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+ruby: 3.0.2
+rails: 6.1.5
+db: Postgresql
