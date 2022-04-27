@@ -16,5 +16,7 @@ db: Postgresql
   - Email: format validations
 - Spec
   - ModelsController spec
-- Front
-  - Add styles
+- Styles
+  - Add icons in contact show view
+- Models:
+  - Add image to contact

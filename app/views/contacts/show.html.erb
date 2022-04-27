@@ -1,14 +1,30 @@
-<h1>Contact</h1>
-
-<p><%= @contact.first_name %></p>
-<p><%= @contact.last_name %></p>
-<p><%= @contact.phone %></p>
-<p><%= @contact.email %></p>
-<p><%= link_to("Edit", edit_contact_path(@contact)) %></p>
-<p><%=
-  link_to(
-    "Delete",
-    contact_path(@contact),
-    method: :delete,
-  )
-%></p>
+<div class="show-contact">
+  <div class="row contact-body">
+    <div class="col-3">
+      <%= image_tag "generic_contact.png" %>
+    </div>
+    <div class="col-9">
+      <h3><%= "#{@contact.first_name}  #{@contact.last_name}"%></h5>
+      <p><b>First name:</b> <%= @contact.first_name %></p>
+      <p><b>Last name:</b> <%= @contact.last_name %></p>
+      <p><b>Phone:</b> <%= @contact.phone %></p>
+      <p><b>Email:</b> <%= @contact.email %></p>
+    </div>
+  </div>
+  <div class="row contact-buttons">
+    <%=
+      link_to(
+        "Edit",
+        edit_contact_path(@contact),
+        class:"col-6 btn btn-secondary")
+    %>
+    <%=
+      link_to(
+        "Delete",
+        contact_path(@contact),
+        method: :delete,
+        class:"col-6 btn btn-danger"
+      )
+    %>
+  </div>
+</div>

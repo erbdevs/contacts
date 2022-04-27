@@ -13,3 +13,14 @@ form.contact-form {
     text-align: right;
   }
 }
+
+.show-contact {
+  .contact-body{
+    background-color: #cfcfcf;
+    border-radius: 15px 15px 0px 0px;
+
+    h3 {
+      text-align: center
+    }
+  }
+}
