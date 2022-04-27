@@ -1,5 +1,5 @@
-<%= form_with model: contact do |form| %>
-  <div>
+<%= form_with model: contact, class: "contact-form" do |form| %>
+  <div class="row-field">
     <%= form.label :first_name %><br>
     <%= form.text_field :first_name %>
     <% contact.errors.full_messages_for(:first_name).each do |message| %>
@@ -7,7 +7,7 @@
     <% end %>
   </div>
 
-  <div>
+  <div class="row-field">
     <%= form.label :last_name %><br>
     <%= form.text_field :last_name %>
     <% contact.errors.full_messages_for(:last_name).each do |message| %>
@@ -15,7 +15,7 @@
     <% end %>
   </div>
 
-  <div>
+  <div class="row-field">
     <%= form.label :phone %><br>
     <%= form.text_field :phone %>
     <% contact.errors.full_messages_for(:phone).each do |message| %>
@@ -23,7 +23,7 @@
     <% end %>
   </div>
 
-  <div>
+  <div class="row-field">
     <%= form.label :email %><br>
     <%= form.text_field :email %>
     <% contact.errors.full_messages_for(:email).each do |message| %>
@@ -31,7 +31,7 @@
     <% end %>
   </div>
 
-  <div>
-    <%= form.submit %>
+  <div class="row-buttons">
+    <%= form.submit(button_text, class: 'btn btn-success') %>
   </div>
 <% end %>
