@@ -17,6 +17,8 @@ db: Postgresql
 
 # ToDo
 
+- Add .env file to manage credentials instead of having them in the config/database.yml
+- Clean up mailers and more unused stuff
 - Add validations to the different Contact fields such as:
   - Email: format validations
 - Spec
