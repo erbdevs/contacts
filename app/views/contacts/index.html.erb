@@ -10,6 +10,7 @@
       <th>Link</th>
     </tr>
   </thead>
+  <tbody>
     <% @all_contacts.each do |contact| %>
       <tr>
         <td><%= contact.first_name %></td>
@@ -19,4 +20,5 @@
         <td><%= link_to("See more", contact)%></td>
       </tr>
     <% end %>
+  </tbody>
 </table>
