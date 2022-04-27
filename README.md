@@ -2,6 +2,11 @@
 
 This is an example application used for didactic purposes. There is a model called Contact, and we can do CRUD operations with objects of this class.
 
+# Set Up
+
+`rails db:setup`
+
+`rails db:seed`
 # Information
 
 ruby: 3.0.2
